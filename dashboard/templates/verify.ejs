@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/verify.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+ <%- include('./partials/Navbar', { bot, user }); %>
+  <div class="section-container">
+    <section id="verify">
+    <i class="fas fa-fingerprint verify-i"></i>
+    <h3 class="section-header">Doğrulama</h3>
+    <p>Lütfen doğrulamak için aşağıdaki captcha'yı tamamlayın</p>
+    <form action='' method="POST" id="captcha">
+      <div class="h-captcha" data-theme="dark" data-sitekey=<%= config.website.captcha.sitekey %> data-callback="Submit"></div>
+    </form>
+    </section>
+    </div>
+    <footer>
+      <span>Yardım İçin <a href="https://discord.gg/3Ke3XY3mJJ">Tıklayınız</a> | Levian #2022 </span>
+    </footer>
+    <script src="https://hcaptcha.com/1/api.js" async defer></script>
+  </body>
+</html>
